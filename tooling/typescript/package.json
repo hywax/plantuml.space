@@ -1,0 +1,11 @@
+{
+  "name": "@plantuml/tooling-typescript",
+  "private": true,
+  "files": [
+    "./base.json",
+    "./node.json"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules"
+  }
+}
