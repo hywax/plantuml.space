@@ -1,0 +1,26 @@
+{
+  "name": "@plantuml/web",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "dev": "nuxt dev",
+    "postinstall": "nuxt prepare",
+    "clean": "rm -rf dist .turbo .nuxt .output node_modules",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@plantuml/db": "workspace:*",
+    "@plantuml/kit": "workspace:*",
+    "nuxt": "^3.11.2",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
+  },
+  "devDependencies": {
+    "@plantuml/tooling-eslint": "workspace:*",
+    "@plantuml/tooling-typescript": "workspace:*",
+    "typescript": "^5.4.5"
+  }
+}
