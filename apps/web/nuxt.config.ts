@@ -1,4 +1,7 @@
 export default defineNuxtConfig({
+  devtools: {
+    enabled: false,
+  },
   srcDir: 'src',
   modules: ['@nuxt/fonts', 'nuxt-primevue'],
   primevue: {
