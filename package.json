@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "packageManager": "pnpm@9.0.6",
   "scripts": {
-    "release": "pnpm lint && pnpm typecheck && pnpm build changelogen --release --push",
+    "release": "pnpm lint && pnpm typecheck && pnpm build && changelogen --release --push",
     "build": "turbo build",
     "dev": "dotenv -- turbo dev --parallel",
     "dev:web": "dotenv -- pnpm --filter @plantuml/web run dev",
