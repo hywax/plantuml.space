@@ -3,11 +3,14 @@ export default defineNuxtConfig({
     enabled: false,
   },
   srcDir: 'src',
-  modules: ['@nuxt/fonts', 'nuxt-primevue'],
+  modules: ['@nuxt/fonts', '@nuxtjs/color-mode', 'nuxt-primevue'],
   primevue: {
     importTheme: {
       from: '~~/theme.config',
     },
+  },
+  colorMode: {
+    classSuffix: '',
   },
   fonts: {
     provider: 'google',
