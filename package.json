@@ -1,0 +1,37 @@
+{
+  "name": "plantuml",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.0.6",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "dotenv -- turbo dev --parallel",
+    "dev:web": "dotenv -- pnpm --filter @plantuml/web run dev",
+    "dev:workers": "dotenv -- pnpm --filter @plantuml/workers run dev",
+    "db:migrate": "dotenv -- pnpm --filter @plantuml/db run migrate",
+    "db:generate": "dotenv -- pnpm --filter @plantuml/db run generate",
+    "db:fixtures": "dotenv -- pnpm --filter @plantuml/db run fixtures",
+    "db:studio": "dotenv -- pnpm --filter @plantuml/db studio",
+    "clean": "turbo clean && rm -rf .turbo node_modules",
+    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "typecheck": "turbo typecheck",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.12.12",
+    "dotenv-cli": "^7.4.2",
+    "eslint": "^9.3.0",
+    "turbo": "^1.13.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5"
+  },
+  "engines": {
+    "node": "^20.12.12"
+  },
+  "lint-staged": {
+    "*.ts": "pnpm run lint"
+  }
+}
