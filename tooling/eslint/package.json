@@ -1,0 +1,20 @@
+{
+  "name": "@plantuml/tooling-eslint",
+  "private": true,
+  "exports": {
+    "./base": "./base.mjs",
+    "./nuxt": "./nuxt.mjs"
+  },
+  "files": [
+    "base.mjs",
+    "nuxt.mjs"
+  ],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.18.1",
+    "eslint": "^9.3.0"
+  }
+}
