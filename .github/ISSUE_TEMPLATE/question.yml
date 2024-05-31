@@ -1,6 +1,6 @@
 name: Question
 description: Further information is requested
-title: '[QUESTION] <title>'
+title: '<title>'
 labels: ['question']
 
 body:

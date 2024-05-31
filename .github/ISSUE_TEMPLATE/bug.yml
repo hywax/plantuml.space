@@ -1,6 +1,6 @@
 name: Bug
 description: Something isn't working
-title: '[BUG] <title>'
+title: '<title>'
 labels: ['bug']
 
 body:

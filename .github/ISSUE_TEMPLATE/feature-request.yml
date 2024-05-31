@@ -1,6 +1,6 @@
 name: Feature Request
 description: Suggest an idea for future development
-title: '[FEATURE_REQUEST] <title>'
+title: '<title>'
 labels: ['feature request']
 
 body:
