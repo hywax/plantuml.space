@@ -2,7 +2,7 @@
   "name": "plantuml",
   "private": true,
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.0.6",
   "scripts": {
     "release": "pnpm lint && pnpm typecheck && pnpm build && changelogen --release --push",
