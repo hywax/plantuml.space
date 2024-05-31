@@ -1,0 +1,50 @@
+version: "3.8"
+services:
+  web:
+    image: ghcr.io/hywax/plantuml-web:${VERSION:-latest}
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      REDIS_HOST: redis
+
+  workers:
+    image: ghcr.io/hywax/plantuml-workers:${VERSION:-latest}
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      web:
+        condition: service_started
+
+  migrator:
+    image: ghcr.io/hywax/plantuml-migrator:${VERSION:-latest}
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_started
+
+  redis:
+    image: mirror.gcr.io/redis:7.2-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+
+  db:
+    image: mariadb:11.4-rc
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
+  redis:

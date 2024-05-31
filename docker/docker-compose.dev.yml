@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  redis:
+    image: mirror.gcr.io/redis:7.2-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
+
+  db:
+    image: mariadb:11.4-rc
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+    volumes:
+      - db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: unless-stopped
+    ports:
+      - '8888:80'
+    environment:
+      - PMA_HOST=db
+      - PMA_ARBITRARY=1
+      - MYSQL_ROOT_PASSWORD=root
+    depends_on:
+      - db
+
+volumes:
+  db:
+  redis:
