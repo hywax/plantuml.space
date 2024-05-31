@@ -2,6 +2,7 @@
   "name": "plantuml",
   "private": true,
   "type": "module",
+  "version": "0.0.0",
   "packageManager": "pnpm@9.0.6",
   "scripts": {
     "build": "turbo build",
@@ -15,6 +16,9 @@
     "clean": "turbo clean && rm -rf .turbo node_modules",
     "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "docs:dev": "pnpm --filter @plantuml/docs run dev",
+    "docs:build": "pnpm --filter @plantuml/docs run build",
+    "docs:preview": "pnpm --filter @plantuml/docs run preview",
     "typecheck": "turbo typecheck",
     "prepare": "husky"
   },

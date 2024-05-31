@@ -1,0 +1,18 @@
+{
+  "name": "@plantuml/docs",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "clean": "rm -rf dist .turbo cache node_modules",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@plantuml/tooling-eslint": "workspace:*",
+    "@plantuml/tooling-typescript": "workspace:*",
+    "vitepress": "^1.2.2"
+  }
+}
