@@ -12,15 +12,19 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.7.0",
     "@plantuml/db": "workspace:*",
     "@plantuml/kit": "workspace:*",
     "nuxt": "^3.11.2",
+    "primeicons": "^7.0.0",
+    "primevue": "4.0.0-beta.4",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@plantuml/tooling-eslint": "workspace:*",
     "@plantuml/tooling-typescript": "workspace:*",
+    "nuxt-primevue": "4.0.0-beta.4",
     "typescript": "^5.4.5"
   }
 }
