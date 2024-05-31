@@ -1,0 +1,21 @@
+{
+  "name": "@plantuml/kit",
+  "type": "module",
+  "private": true,
+  "main": "./src/index.ts",
+  "scripts": {
+    "clean": "rm -rf dist .turbo node_modules",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "bullmq": "^5.7.14",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@plantuml/tooling-eslint": "workspace:*",
+    "@plantuml/tooling-typescript": "workspace:*",
+    "typescript": "^5.4.5"
+  }
+}
