@@ -1,0 +1,26 @@
+{
+  "globalDependencies": ["**/.env"],
+  "pipeline": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/.eslintcache"]
+    },
+    "typecheck": {
+      "dependsOn": ["^topo"],
+      "outputs": ["node_modules/.cache/tsbuildinfo.json"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
