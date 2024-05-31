@@ -1,0 +1,9 @@
+{
+  "extends": "@plantuml/tooling-typescript/node.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
+    "target": "ESNext"
+  },
+  "include": ["src/**/*.ts", "cli/*.ts"],
+  "exclude": ["node_modules"]
+}

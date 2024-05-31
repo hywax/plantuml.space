@@ -1,0 +1,30 @@
+{
+  "name": "@plantuml/db",
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "migrate": "tsx ./cli/migrate.ts",
+    "generate": "pnpm drizzle-kit generate",
+    "fixtures": "tsx ./cli/fixtures.ts",
+    "studio": "drizzle-kit studio",
+    "clean": "rm -rf dist .turbo node_modules",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@plantuml/kit": "workspace:*",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
+    "drizzle-zod": "^0.5.1",
+    "mysql2": "^3.9.9",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@plantuml/tooling-eslint": "workspace:*",
+    "@plantuml/tooling-typescript": "workspace:*",
+    "drizzle-kit": "^0.21.4",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}
