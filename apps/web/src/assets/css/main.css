@@ -1,10 +1,74 @@
+:root {
+  --primary-text-color:var(--p-primary-600);
+  --primary-color: var(--p-primary-color);
+  --primary-contrast-color:var(--p-primary-contrast-color);
+  --primary-hover-color: var(--p-primary-hover-color);
+  --text-color: var(--p-surface-700);
+  --text-secondary-color: var(--p-surface-500);
+  --glow-image: url('../../assets/img/pattern.png');
+  --glow-blend: hard-light, multiply;
+  --topbar-sticky-background:rgba(255,255,255,.7);
+  --card-border: 1px solid var(--p-surface-200);
+  --card-background: #ffffff;
+  --border-color: var(--p-surface-200);
+  --ground-background: var(--p-surface-50);
+  --overlay-background: #ffffff;
+  --hover-background: var(--p-surface-100);
+  --code-background: var(--p-surface-950);
+  --high-contrast-text-color: var(--p-surface-900);
+  --hover-border-color: var(--p-surface-400);
+  --mark-background: var(--p-surface-200);
+  --mark-text-color: var(--p-surface-700);
+  --selection-background: var(--p-surface-200);
+  --selection-text-color: var(--p-surface-950);
+  --logo-color: var(--text-secondary-color);
+}
+
+:root[class="dark"] {
+  --primary-text-color:var(--p-primary-400);
+  --primary-color: var(--p-primary-color);
+  --primary-contrast-color:var(--p-primary-contrast-color);
+  --primary-hover-color: var(--p-primary-hover-color);
+  --text-color: var(--p-surface-0);
+  --text-secondary-color: var(--p-surface-400);
+  --glow-image: url('../../assets/img/pattern.png'), radial-gradient(50% 50% at center -25px, var(--p-primary-color) 0%, #000000 100%);
+  --glow-blend: hard-light, color-dodge;
+  --topbar-sticky-background:rgba(0,0,0,.3);
+  --card-border: 1px solid transparent;
+  --card-background: var(--p-surface-900);
+  --border-color: var(--p-surface-700);
+  --ground-background: var(--p-surface-950);
+  --overlay-background: var(--p-surface-900);
+  --hover-background: var(--p-surface-800);
+  --code-background: var(--p-surface-900);
+  --high-contrast-text-color: var(--p-surface-0);
+  --hover-border-color: var(--p-surface-500);
+  --mark-background: var(--p-surface-700);
+  --mark-text-color: var(--p-surface-200);
+  --selection-background: var(--p-surface-700);
+  --selection-text-color: var(--p-surface-0);
+  --logo-color: var(--text-secondary-color);
+}
+
 html {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "slnt" 0;
+  font-size: 14px;
 }
 
 body {
   margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--ground-background);
+  font-weight: normal;
+  color: var(--text-color);
+}
+
+::selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text-color);
 }
