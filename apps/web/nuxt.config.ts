@@ -3,8 +3,14 @@ export default defineNuxtConfig({
     enabled: false,
   },
   srcDir: 'src',
-  modules: ['@nuxt/fonts', '@nuxtjs/color-mode', 'nuxt-primevue'],
+  modules: [
+    '@nuxt/fonts',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    'nuxt-primevue',
+  ],
   primevue: {
+    usePrimeVue: true,
     importTheme: {
       from: '~~/theme.config',
     },
@@ -38,9 +44,15 @@ export default defineNuxtConfig({
       },
     },
   },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   css: [
-    '~/assets/css/main.css',
     'primeicons/primeicons.css',
+    '~/assets/css/main.css',
   ],
   nitro: {
     esbuild: {
