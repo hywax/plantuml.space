@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+  ],
+  components: [
+    { path: '~/components/elements', prefix: 'E' },
+    '~/components',
   ],
   colorMode: {
     classSuffix: '',

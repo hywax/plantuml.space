@@ -14,6 +14,7 @@
   "dependencies": {
     "@plantuml/db": "workspace:*",
     "@plantuml/kit": "workspace:*",
+    "@vueuse/core": "^10.10.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
   },
@@ -23,6 +24,7 @@
     "@nuxtjs/color-mode": "^3.4.1",
     "@plantuml/tooling-eslint": "workspace:*",
     "@plantuml/tooling-typescript": "workspace:*",
+    "@vueuse/nuxt": "^10.10.0",
     "nuxt": "^3.11.2",
     "typescript": "^5.4.5"
   }
