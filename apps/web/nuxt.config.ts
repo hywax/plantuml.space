@@ -7,12 +7,35 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxtjs/color-mode',
+    '@nuxtjs/i18n',
     '@vueuse/nuxt',
   ],
   components: [
     { path: '~/components/elements', prefix: 'E' },
     '~/components',
   ],
+  i18n: {
+    langDir: 'locales',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true,
+    },
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json' },
+      { code: 'ru', iso: 'ru-RU', name: 'Русский', file: 'ru-RU.json' },
+      // { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh-CN.json' },
+      // { code: 'hi', iso: 'hi-IN', name: 'हिंदी', file: 'hi-IN.json' },
+    ],
+  },
+  runtimeConfig: {
+    public: {
+      repositoryUrl: 'https://github.com/hywax/plantuml.space',
+      boostyUrl: '#',
+      authorUrl: 'https://hywax.space',
+    },
+  },
   colorMode: {
     classSuffix: '',
     preference: 'dark',
