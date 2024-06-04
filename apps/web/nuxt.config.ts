@@ -23,10 +23,10 @@ export default defineNuxtConfig({
       alwaysRedirect: true,
     },
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json' },
-      { code: 'ru', iso: 'ru-RU', name: 'Русский', file: 'ru-RU.json' },
-      // { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh-CN.json' },
-      // { code: 'hi', iso: 'hi-IN', name: 'हिंदी', file: 'hi-IN.json' },
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.ts' },
+      { code: 'ru', iso: 'ru-RU', name: 'Русский', file: 'ru-RU.ts' },
+      // { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh-CN.ts' },
+      // { code: 'hi', iso: 'hi-IN', name: 'हिंदी', file: 'hi-IN.ts' },
     ],
   },
   runtimeConfig: {
