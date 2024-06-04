@@ -22,4 +22,9 @@ export default antfu({
     'dist',
     'node_modules',
   ],
+}, {
+  files: ['src/locales/*.ts'],
+  rules: {
+    'style/quote-props': 'off',
+  },
 })

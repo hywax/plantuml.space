@@ -8,7 +8,7 @@
         <ENavigation :links="links" />
       </div>
       <div class="flex items-center justify-end md:flex-1 gap-1.5">
-        <div class="hidden md:flex items-center">
+        <div class="hidden md:flex items-center justify-end gap-x-1.5">
           <ELanguage />
 
           <EToggleTheme />
@@ -73,55 +73,17 @@ const localePath = useLocalePath()
 
 const links = computed(() => [
   {
-    label: t('diagrams.title'),
+    label: t('app.header.navigation.diagrams'),
     to: localePath('/diagrams'),
     icon: 'heroicons:chart-pie-20-solid',
-    children: [
-      {
-        label: t('diagrams.sequence.menu.title'),
-        description: t('diagrams.sequence.menu.description'),
-        to: localePath('/diagrams/sequence'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-      {
-        label: t('diagrams.usecase.menu.title'),
-        description: t('diagrams.usecase.menu.description'),
-        to: localePath('/diagrams/usecase'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-      {
-        label: t('diagrams.class.menu.title'),
-        description: t('diagrams.class.menu.description'),
-        to: localePath('/diagrams/class'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-      {
-        label: t('diagrams.activity.menu.title'),
-        description: t('diagrams.activity.menu.description'),
-        to: localePath('/diagrams/activity'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-      {
-        label: t('diagrams.component.menu.title'),
-        description: t('diagrams.component.menu.description'),
-        to: localePath('/diagrams/component'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-      {
-        label: t('diagrams.state.menu.title'),
-        description: t('diagrams.state.menu.description'),
-        to: localePath('/diagrams/state'),
-        icon: 'heroicons:chart-pie-20-solid',
-      },
-    ],
   },
   {
-    label: t('themes.title'),
+    label: t('app.header.navigation.themes'),
     to: localePath('/themes'),
     icon: 'heroicons:chart-pie-20-solid',
   },
   {
-    label: t('integrations.title'),
+    label: t('app.header.navigation.integrations'),
     to: localePath('/integrations'),
     icon: 'heroicons:chart-pie-20-solid',
   },

@@ -1,6 +1,13 @@
 export default {
   app: {
     title: 'PlantUML',
+    header: {
+      navigation: {
+        diagrams: 'Diagrams',
+        themes: 'Themes',
+        integrations: 'Integrations',
+      },
+    },
     footer: {
       copyright: 'PlantUML.space by',
       epistle: 'From developer to other developers',
@@ -29,7 +36,6 @@ export default {
     },
   },
   home: {
-    breadcrumb: 'Home',
     hero: {
       title1: 'From Mind to',
       title2: 'Diagram',
@@ -41,64 +47,37 @@ export default {
   diagrams: {
     title: 'Diagrams',
     description: '',
-    breadcrumb: 'Diagrams',
-    sequence: {
-      title: 'Sequence Diagrams',
-      breadcrumb: 'Sequence',
-      menu: {
-        title: 'Sequence',
-        description: '...',
-      },
-    },
-    usecase: {
-      title: 'Use Case Diagrams',
-      breadcrumb: 'Use Case',
-      menu: {
-        title: 'Use Case',
-        description: '...',
-      },
-    },
-    class: {
-      title: 'Class Diagrams',
-      breadcrumb: 'Class',
-      menu: {
-        title: 'Class',
-        description: '...',
-      },
-    },
-    activity: {
-      title: 'Activity Diagrams',
-      breadcrumb: 'Activity',
-      menu: {
-        title: 'Activity',
-        description: '...',
-      },
-    },
-    component: {
-      title: 'Component Diagrams',
-      breadcrumb: 'Component',
-      menu: {
-        title: 'Component',
-        description: '...',
-      },
-    },
-    state: {
-      title: 'State Diagrams',
-      breadcrumb: 'State',
-      menu: {
-        title: 'State',
-        description: '...',
-      },
-    },
   },
   themes: {
     title: 'Themes',
     description: '',
-    breadcrumb: 'Themes',
   },
   integrations: {
     title: 'Integrations',
     description: '',
-    breadcrumb: 'Integrations',
   },
+  // Specific pathways for breadcrumbs
+  'breadcrumbs.home': 'Home',
+  'breadcrumbs.themes': 'Themes',
+  'breadcrumbs.integrations': 'Integrations',
+  'breadcrumbs.diagrams': 'Diagrams',
+  'breadcrumbs.diagrams.sequence': 'Sequence',
+  'breadcrumbs.diagrams.use-case': 'Use case',
+  'breadcrumbs.diagrams.class': 'Class',
+  'breadcrumbs.diagrams.activity': 'Activity',
+  'breadcrumbs.diagrams.component': 'Component',
+  'breadcrumbs.diagrams.state': 'State',
+  'breadcrumbs.diagrams.object': 'Object',
+  'breadcrumbs.diagrams.deployment': 'Deployment',
+  'breadcrumbs.diagrams.timing': 'Timing',
+  'breadcrumbs.diagrams.regex': 'Regex',
+  'breadcrumbs.diagrams.nwdiag': 'Network',
+  'breadcrumbs.diagrams.salt': 'Wireframe',
+  'breadcrumbs.diagrams.archimate': 'Archimate',
+  'breadcrumbs.diagrams.gantt': 'Gantt',
+  'breadcrumbs.diagrams.chronology': 'Chronology',
+  'breadcrumbs.diagrams.mindmap': 'WBS',
+  'breadcrumbs.diagrams.wbs': 'MindMap',
+  'breadcrumbs.diagrams.json': 'JSON',
+  'breadcrumbs.diagrams.yaml': 'YAML',
 }

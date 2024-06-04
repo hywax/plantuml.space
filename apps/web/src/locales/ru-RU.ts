@@ -1,22 +1,19 @@
 export default {
   app: {
     title: 'PlantUML',
+    header: {
+      navigation: {
+        diagrams: 'Диаграммы',
+        themes: 'Темы',
+        integrations: 'Интеграции',
+      },
+    },
     footer: {
       copyright: 'PlantUML.space от',
       epistle: 'От разработчика другим разработчикам',
       github: 'Github репозиторий',
       boosty: 'Донат на Boosty',
       personal: 'Перейти на личный сайт',
-    },
-  },
-  home: {
-    breadcrumb: 'Главная',
-    hero: {
-      title1: 'От мысли к',
-      title2: 'диаграмме',
-      description: 'Сборник диаграмм PlantUML, демонстрирующий различные типы, включая диаграммы последовательности, классов и другие диаграммы. Изучайте и учитесь на примерах.',
-      button: 'Все диаграммы',
-      github: 'Звезда на Github',
     },
   },
   elements: {
@@ -38,67 +35,31 @@ export default {
       select: 'Выберите {0} язык',
     },
   },
+  home: {
+    hero: {
+      title1: 'От мысли к',
+      title2: 'диаграмме',
+      description: 'Сборник диаграмм PlantUML, демонстрирующий различные типы, включая диаграммы последовательности, классов и другие диаграммы. Изучайте и учитесь на примерах.',
+      button: 'Все диаграммы',
+      github: 'Звезда на Github',
+    },
+  },
   diagrams: {
     title: 'Диаграммы',
     description: '',
-    breadcrumb: 'Диаграммы',
-    sequence: {
-      title: 'Диаграммы последовательности',
-      breadcrumb: 'Последовательность',
-      menu: {
-        title: 'Последовательность',
-        description: '...',
-      },
-    },
-    usecase: {
-      title: 'Диаграммы прецедентов',
-      breadcrumb: 'Прецедент',
-      menu: {
-        title: 'Прецедент',
-        description: '...',
-      },
-    },
-    class: {
-      title: 'Диаграммы классов',
-      breadcrumb: 'Класс',
-      menu: {
-        title: 'Класс',
-        description: '...',
-      },
-    },
-    activity: {
-      title: 'Диаграммы активности',
-      breadcrumb: 'Активность',
-      menu: {
-        title: 'Активность',
-        description: '...',
-      },
-    },
-    component: {
-      title: 'Диаграммы компонентов',
-      breadcrumb: 'Компонент',
-      menu: {
-        title: 'Компонент',
-        description: '...',
-      },
-    },
-    state: {
-      title: 'Диаграммы состояний',
-      breadcrumb: 'Состояние',
-      menu: {
-        title: 'Состояние',
-        description: '...',
-      },
-    },
   },
   themes: {
     title: 'Темы',
     description: '',
-    breadcrumb: 'Темы',
   },
   integrations: {
     title: 'Интеграции',
     description: '',
-    breadcrumb: 'Интеграции',
   },
+
+  // Специфические пути для хлебных крошек
+  'breadcrumbs.home': 'Главная',
+  'breadcrumbs.themes': 'Темы',
+  'breadcrumbs.integrations': 'Интеграции',
+  'breadcrumbs.diagrams': 'Диаграммы',
 }

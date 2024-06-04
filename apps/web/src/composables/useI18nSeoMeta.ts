@@ -59,14 +59,14 @@ export function useI18nSeoMeta(options: I18nSeoMetaOptions): I18nSeoMeta {
     const rootPath = defaultLocale === locale.value ? '/' : `/${locale.value}/`
 
     const breadcrumbs: BreadcrumbLink[] = [{
-      label: t('home.breadcrumb'),
+      label: t('breadcrumbs.home'),
       to: rootPath,
     }]
 
     const segments = pathBreadcrumbSegments(router.currentRoute.value.path, rootPath)
     for (const segment of segments) {
       breadcrumbs.push({
-        label: t(`${segment.key}.breadcrumb`),
+        label: t(`breadcrumbs.${segment.key}`),
         to: segment.route,
       })
     }
