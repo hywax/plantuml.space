@@ -9,10 +9,10 @@
       </p>
 
       <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3 justify-center">
-        <UButton color="primary" size="lg" icon="heroicons:squares-2x2-16-solid">
+        <UButton color="primary" size="lg" icon="heroicons:squares-2x2-16-solid" :to="localePath('/diagrams')">
           {{ $t('home.hero.button') }}
         </UButton>
-        <UButton color="gray" size="lg" variant="ghost" icon="heroicons:arrow-long-right" trailing>
+        <UButton color="gray" size="lg" variant="ghost" icon="heroicons:arrow-long-right" target="_blank" rel="nofollow" :to="config.public.repositoryUrl" trailing>
           {{ $t('home.hero.github') }}
         </UButton>
       </div>
@@ -30,4 +30,7 @@ useI18nSeoMeta({
     description: t('home.hero.description'),
   },
 })
+
+const localePath = useLocalePath()
+const config = useRuntimeConfig()
 </script>

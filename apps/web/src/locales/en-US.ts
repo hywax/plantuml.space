@@ -1,8 +1,4 @@
 export default {
-  nuxtSiteConfig: {
-    name: 'PlantUML',
-    description: 'My site description',
-  },
   app: {
     title: 'PlantUML',
     footer: {
@@ -44,17 +40,65 @@ export default {
   },
   diagrams: {
     title: 'Diagrams',
+    description: '',
     breadcrumb: 'Diagrams',
+    sequence: {
+      title: 'Sequence Diagrams',
+      breadcrumb: 'Sequence',
+      menu: {
+        title: 'Sequence',
+        description: '...',
+      },
+    },
+    usecase: {
+      title: 'Use Case Diagrams',
+      breadcrumb: 'Use Case',
+      menu: {
+        title: 'Use Case',
+        description: '...',
+      },
+    },
+    class: {
+      title: 'Class Diagrams',
+      breadcrumb: 'Class',
+      menu: {
+        title: 'Class',
+        description: '...',
+      },
+    },
     activity: {
+      title: 'Activity Diagrams',
       breadcrumb: 'Activity',
+      menu: {
+        title: 'Activity',
+        description: '...',
+      },
+    },
+    component: {
+      title: 'Component Diagrams',
+      breadcrumb: 'Component',
+      menu: {
+        title: 'Component',
+        description: '...',
+      },
+    },
+    state: {
+      title: 'State Diagrams',
+      breadcrumb: 'State',
+      menu: {
+        title: 'State',
+        description: '...',
+      },
     },
   },
   themes: {
     title: 'Themes',
+    description: '',
     breadcrumb: 'Themes',
   },
   integrations: {
     title: 'Integrations',
+    description: '',
     breadcrumb: 'Integrations',
   },
 }

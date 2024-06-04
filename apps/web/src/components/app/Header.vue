@@ -59,7 +59,6 @@
 import { Dialog, DialogPanel, TransitionRoot, provideUseId } from '@headlessui/vue'
 import { useId } from '#imports'
 
-const { t } = useI18n()
 const { isHeaderDialogOpen } = useUIState()
 const route = useRoute()
 
@@ -69,65 +68,62 @@ watch(() => route.fullPath, () => {
 
 provideUseId(() => useId())
 
+const { t } = useI18n()
+const localePath = useLocalePath()
+
 const links = computed(() => [
   {
     label: t('diagrams.title'),
-    to: '/',
+    to: localePath('/diagrams'),
     icon: 'heroicons:chart-pie-20-solid',
     children: [
-      // {
-      //   label: 'Flowcharts',
-      //   to: '/',
-      //   icon: 'heroicons:chart-pie-20-solid',
-      //   description: 'Create flowcharts with ease',
-      // },
-      // {
-      //   label: 'Mindmaps',
-      //   to: '/',
-      //   icon: 'heroicons:chart-bar-20-solid',
-      //   description: 'Create mindmaps with ease',
-      // },
-      // {
-      //   label: 'Wireframes',
-      //   to: '/',
-      //   icon: 'heroicons:battery-50-20-solid',
-      //   description: 'Create wireframes with ease',
-      // },
-      // {
-      //   label: 'Flowcharts',
-      //   to: '/',
-      //   icon: 'heroicons:chart-pie-20-solid',
-      //   description: 'Create flowcharts with ease',
-      // },
-      // {
-      //   label: 'Mindmaps',
-      //   to: '/',
-      //   icon: 'heroicons:chart-bar-20-solid',
-      //   description: 'Create mindmaps with ease',
-      // },
-      // {
-      //   label: 'Wireframes',
-      //   to: '/',
-      //   icon: 'heroicons:battery-50-20-solid',
-      //   description: 'Create wireframes with ease',
-      // },
-      // {
-      //   label: 'Wireframes',
-      //   to: '/',
-      //   icon: 'heroicons:battery-50-20-solid',
-      //   description: 'Create wireframes with ease',
-      // },
+      {
+        label: t('diagrams.sequence.menu.title'),
+        description: t('diagrams.sequence.menu.description'),
+        to: localePath('/diagrams/sequence'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
+      {
+        label: t('diagrams.usecase.menu.title'),
+        description: t('diagrams.usecase.menu.description'),
+        to: localePath('/diagrams/usecase'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
+      {
+        label: t('diagrams.class.menu.title'),
+        description: t('diagrams.class.menu.description'),
+        to: localePath('/diagrams/class'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
+      {
+        label: t('diagrams.activity.menu.title'),
+        description: t('diagrams.activity.menu.description'),
+        to: localePath('/diagrams/activity'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
+      {
+        label: t('diagrams.component.menu.title'),
+        description: t('diagrams.component.menu.description'),
+        to: localePath('/diagrams/component'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
+      {
+        label: t('diagrams.state.menu.title'),
+        description: t('diagrams.state.menu.description'),
+        to: localePath('/diagrams/state'),
+        icon: 'heroicons:chart-pie-20-solid',
+      },
     ],
   },
   {
     label: t('themes.title'),
-    to: '/',
-    icon: '',
+    to: localePath('/themes'),
+    icon: 'heroicons:chart-pie-20-solid',
   },
   {
     label: t('integrations.title'),
-    to: '/',
-    icon: '',
+    to: localePath('/integrations'),
+    icon: 'heroicons:chart-pie-20-solid',
   },
 ])
 </script>
